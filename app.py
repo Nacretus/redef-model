@@ -8,6 +8,8 @@ import re
 import numpy as np
 from fastapi.middleware.cors import CORSMiddleware
 
+# Initialize FastAPI
+app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["https://thesis-project.vercel.app"],  # Or use ["*"] to allow all origins
@@ -16,8 +18,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize FastAPI
-app = FastAPI()
 
 # =================================================================
 # Critical Fix for TF 2.10 + .keras Format
