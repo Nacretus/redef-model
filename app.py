@@ -6,6 +6,15 @@ from tensorflow.keras.layers import TextVectorization
 import json
 import re
 import numpy as np
+from fastapi.middleware.cors import CORSMiddleware
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://thesis-project.vercel.app"],  # Or use ["*"] to allow all origins
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Initialize FastAPI
 app = FastAPI()
