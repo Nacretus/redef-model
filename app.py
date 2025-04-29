@@ -103,7 +103,7 @@ def preprocess(text):
 # =================================================================
 class TextRequest(BaseModel):
     text: str
-
+#optimized thresholds based on minimal difference of precision and recall 0.39773023, 0.42862859, 0.56014192, 0.44549420, 0.34632149, 0.64880210
 THRESHOLDS = [0.62206481, 0.62625204, 0.62000381, 0.52563927, 0.30879551, 0.62308365]
 LABELS = ['toxic', 'insult', 'profanity', 'threat', 'identity hate', 'very_toxic']
 
